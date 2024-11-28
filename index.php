@@ -1,11 +1,13 @@
 <?php
 if ($_SESSION['tech_admin_id']) {
 	echo "<script>location.href='index.php';</script>";
+} else {
+	echo "<script>location.href='login.php';</script>";
 }
-$user_id = checkAnyAdminPresent();
-if (!$user_id) {
-	echo "<script>location.href='login.php'</script>";
-}
+// $user_id = checkAnyAdminPresent();
+// if (!$user_id) {
+// 	echo "<script>location.href='login.php'</script>";
+// }
 
 ?>
 
