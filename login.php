@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include_once("controller/route.php");
-
+session_start();
 if ($_SESSION['tech_admin_id']) {
     echo "<script>location.href='index.php';</script>";
 }
@@ -99,7 +99,7 @@ if (isset($_POST['login'])) {
     //print_r($result);
     if ($email == "farghly@yahoo.com" && $password =="Aa12345") {
         //echo "<script>$('#email_error').hide();</script>";
-        $_SESSION['tech_admin_id'] = ['data'][`$email`];
+        $_SESSION['tech_admin_id'] = $email;
         //$_SESSION['user_extension'] = $result['data']['password'];
         echo "<script>location.href='index.php';</script>";
     } else {
