@@ -99,7 +99,7 @@ if (isset($_POST['login'])) {
     //print_r($result);
     if ($email == "farghly@yahoo.com" && $password =="Aa12345") {
         //echo "<script>$('#email_error').hide();</script>";
-        $_SESSION['tech_admin_id'] = $result['data']['email'];
+        $_SESSION['tech_admin_id'] = $result['data']['farghly@yahoo.com'];
         //$_SESSION['user_extension'] = $result['data']['password'];
         echo "<script>location.href='index.php';</script>";
     } else if ($result['status'] == "0") {
