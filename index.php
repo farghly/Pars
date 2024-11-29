@@ -1,10 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['tech_admin_id']))
  if ($_SESSION['tech_admin_id']) {
-    echo "<script>location.href='index.php';</script>";
- } else {
- 	echo "<script>location.href='login.php';</script>";
- }
+  //  echo "<script>location.href='index.php';</script>";
+
 // $user_id = checkAnyAdminPresent();
 // if (!$user_id) {
 // 	echo "<script>location.href='login.php'</script>";
@@ -911,6 +910,12 @@ hr {
         }
     }
     </script>
+<?php
+ } else {
+   // echo "<script>location.href='login.php';</script>";
+    echo "Session not found";
+}
+?>
 
 </body>
 
