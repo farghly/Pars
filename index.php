@@ -1,7 +1,7 @@
 <?php
 session_start();
  if ($_SESSION['tech_admin_id']) {
- 	echo "<script>location.href='index.php';</script>";
+    header("Location:index.php");
  } else {
  	echo "<script>location.href='login.php';</script>";
  }
