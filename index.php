@@ -419,8 +419,9 @@ function list_logs()
 		if (preg_match("/csv$/", $file)) {
 			$size     = filesize("files/$file") / 1024;
 			$filedate = date("m/d/Y H:i:s", filemtime("files/$file"));
-			$link = "downloadLog.php?file=" . urlencode($basepath . "/files/$file");
-			echo "<tr> <td> <a href='$link'>" . $file . "</a> </td> <td> $filedate </td>"; //<td> $size kB</td>
+            /* ====== commit code to check ========= */
+		//	$link = "downloadLog.php?file=" . urlencode($basepath . "/files/$file");
+		//	echo "<tr> <td> <a href='$link'>" . $file . "</a> </td> <td> $filedate </td>"; //<td> $size kB</td>
 		}
 	}
 	echo ("</table>");
