@@ -85,6 +85,7 @@ if ($_SESSION['tech_admin_id']) {
 </body>
 
 </html>
+
 <?php
 
 
@@ -117,7 +118,7 @@ if (isset($_POST['login'])) {
 //         //echo "<script>$('#email_error').show();</script>";
 //         echo "<script>toastr['warning']('Wrong Credentials')</script>";
 //     }
-// }
+}
 
 
 ?>
