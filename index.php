@@ -1,4 +1,5 @@
 <?php
+session_start();
  if ($_SESSION['tech_admin_id']) {
  	echo "<script>location.href='index.php';</script>";
  } else {

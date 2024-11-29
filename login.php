@@ -38,7 +38,7 @@ if ($_SESSION['tech_admin_id']) {
             <div class="img-holder">
                 <div class="bg"></div>
                 <div class="info-holder">
-                    <h3>Auto Dialer System</h3>
+                    <h3 class="h1">Auto Dialer System</h3>
                     <p>Powered By AmirHossein</p>
                     <img src="dist/login/graphic5.svg" alt="">
                 </div>
@@ -92,22 +92,32 @@ if ($_SESSION['tech_admin_id']) {
 if (isset($_POST['login'])) {
     $email = $_POST['username'];
     $password = $_POST['password'];
-
-    $dataToSend = $email . "*" . $password;
-    $result = CheckAdminLogin($dataToSend);
+   // $password = md5($password);
+    // $dataToSend = $email . "*" . $password;
+    // $result = CheckAdminLogin($dataToSend);
     //print_r($result);
-    if ($result['status'] >= "1") {
+    if ($email == "farghly@yahoo.com" && $password =="Aa12345") {
         //echo "<script>$('#email_error').hide();</script>";
-        $_SESSION['tech_admin_id'] = $result['data']['user_id'];
-        $_SESSION['user_extension'] = $result['data']['extension'];
-        $_SESSION['user_channel'] = $result['data']['channel'];
-        $_SESSION['asteriskip'] = $result['data']['asterisk_ip'];
+        $_SESSION['tech_admin_id'] = $result['data']['email'];
+        //$_SESSION['user_extension'] = $result['data']['password'];
         echo "<script>location.href='index.php';</script>";
     } else if ($result['status'] == "0") {
         //echo "<script>$('#email_error').show();</script>";
         echo "<script>toastr['warning']('Wrong Credentials')</script>";
     }
-}
+    
+//     if ($result['status'] >= "1") {
+//         //echo "<script>$('#email_error').hide();</script>";
+//         $_SESSION['tech_admin_id'] = $result['data']['user_id'];
+//         $_SESSION['user_extension'] = $result['data']['extension'];
+//         $_SESSION['user_channel'] = $result['data']['channel'];
+//         $_SESSION['asteriskip'] = $result['data']['asterisk_ip'];
+//         echo "<script>location.href='index.php';</script>";
+//     } else if ($result['status'] == "0") {
+//         //echo "<script>$('#email_error').show();</script>";
+//         echo "<script>toastr['warning']('Wrong Credentials')</script>";
+//     }
+// }
 
 
 ?>
