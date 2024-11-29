@@ -1,10 +1,10 @@
 <?php
-session_start();
- if ($_SESSION['tech_admin_id']) {
-    header("Location:index.php");
- } else {
- 	echo "<script>location.href='login.php';</script>";
- }
+// session_start();
+//  if ($_SESSION['tech_admin_id']) {
+//     header("Location:index.php");
+//  } else {
+//  	echo "<script>location.href='login.php';</script>";
+//  }
 // $user_id = checkAnyAdminPresent();
 // if (!$user_id) {
 // 	echo "<script>location.href='login.php'</script>";
